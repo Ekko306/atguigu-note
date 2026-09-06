@@ -1,48 +1,58 @@
+# create Read Update Delete ，  CRUD操作
+
 # 新增操作
 # 方式一：通过列表的append方法，在列表尾部追加一个元素
 nums = [10, 20, 30, 40]
-nums.append(50)
+nums.append(50) # 调用list的方法  append，   和函数不同
 print(nums)
 
 # 方式二：通过列表的insert方法，在列表的指定下标处添加一个元素
-# nums = [10, 20, 30, 40]
-# nums.insert(2, 666)
-# print(nums)
+nums = [10, 20, 30, 40]
+nums.insert(2, 666) # 2是下标， 666是值， 原本的30，40往后移动
+print(nums)
 
 # 方式三：通过列表的extend方法，将可迭代对象中的内容依次取出，追加到列表尾部
-# nums = [10, 20, 30, 40]
-# nums.extend('尚硅谷')
-# nums.extend(range(1, 4))
-# nums.extend([70, 80, 90])
-# print(nums)
+# 可迭代对象， 一个盒子， 盒子内容可以一个个取出来，有几种： 1 字符串， 2 然后range(1,2,3,4)生成的范围 3 列表[7,8,9]
+# extend 拓展的意思，  在最后追加
+nums = [10, 20, 30, 40]
+nums.extend('尚硅谷') # 可能有警告， 原来列表是数字， 现在放入字符 可能有问题，比如调用函数找到列表里最大的元素，可能报错，先关注把字符串追加进去
+nums.extend(range(1, 4)) # 就是数字 1 2 3
+nums.extend([70, 80, 90]) # 传入新列表 70， 80， 90
+print(nums)
+
+#——--------------
 
 # 删除操作
 # 方式一：通过列表的pop方法，删除指定位置的元素，并返回该元素
-# nums = [10, 20, 10, 40, 50]
-# result = nums.pop(1)
-# print(nums)
-# print(result)
+nums = [10, 20, 10, 40, 50]
+result = nums.pop(1) # 1是下标， 并且函数返回值的内容， 原函数原地被修改
+print(nums)
+print(result)
 
 # 方式二：通过列表的remove方法，删除列表中第一次出现的指定值
-# nums = [10, 20, 10, 40, 50]
-# nums.remove(10)
-# print(nums)
+nums = [10, 20, 10, 40, 50]
+nums.remove(10) # 找到第一个并删掉
+print(nums)
 
 # 方式三：通过列表的clear方法，删除列表中所有的元素（清空列表）
-# nums = [10, 20, 10, 40, 50]
-# nums.clear()
-# print(nums)
+nums = [10, 20, 10, 40, 50]
+nums.clear() # 列表全空，不需要传入参数
+print(nums)
 
 # 方式四：通过del关键字，删除指定元素
-# nums = [10, 20, 10, 40, 50]
-# del nums[3]
-# print(nums)
+nums = [10, 20, 10, 40, 50]
+del nums[3]  # 指定未知，  使用del关键字， del和内容之间要有空格， 修改nums
+print(nums)
+
+# ——-------------------
 
 # 修改操作
-# nums = [10, 20, 10, 40, 50]
-# nums[2] = 66
-# print(nums)
+nums = [10, 20, 10, 40, 50]
+nums[2] = 66 # 直接通过下标修改， 不需要关键字/函数调用
+print(nums)
 
+
+# ----------------
 # 查询操作
-# nums = [10, 20, 10, 40, 50]
-# print(nums[3])
+nums = [10, 20, 10, 40, 50]
+print(nums[3])
